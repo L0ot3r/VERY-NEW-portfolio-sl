@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import { BgAnim, Footer, Hero, Layout, Projects, Technologies } from './components';
+import { client } from './utils/lib/client';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  const [projects, setProjects] = useState([])
+  
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const query = `*[_type == 'project']`;
+      const projects = await client.fetch(query)
+      setProjects(projects)
+    }
+    fetchProjects()
+  }, [])
+
+
+	return (
+		<Layout>
+			<div className='section-grid'>
+        <div className='section-flex'>
+          <Hero />
+        </div>
+        <BgAnim />
+      </div>
+      <Projects projects={projects} />
+      <Technologies />
+
+    <footer>
+      <Footer />
+    </footer>
+		</Layout>
+	);
+};
 
 export default App;

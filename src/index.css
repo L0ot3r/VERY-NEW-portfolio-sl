@@ -1,13 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	background: #1a1a1a;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+	--font-title: 'Space Grotesk', sans-serif;
+	--color-primary: #f1f1f1
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.videos::-webkit-scrollbar {
+	width: 0px;
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(237, 237, 237);
+	border-radius: 40px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+/* <------------------ NAVBAR ------------------> */
+
+.nav-container {
+	@apply 
+		grid 
+		grid-cols-5 
+		grid-rows-1 md:grid-rows-2
+		gap-x-8 
+		p-4 
+		pt-8 
+		items-center
+}
+
+.nav-brand {
+	@apply
+		col-start-1 col-end-2
+		flex flex-row items-center
+}
+
+.nav-links {
+	@apply
+		col-start-1 col-end-6 row-start-2
+		lg:row-start-1 
+		md:row-start-2 
+		sm:col-end-5 sm:col-start-2
+		mt-2 md:mt-0
+		flex
+		justify-evenly
+		items-center
+}
+.nav-links li {
+	@apply
+		list-none
+}
+
+.social-links {
+	@apply
+		sm:col-start-5 sm:col-end-6 
+		col-end-5
+		flex
+		sm:justify-around
+		items-center
+}
+
+.nav-link {
+	transition: 0.4s ease;
+	@apply 
+		text-xl 
+		text-[#ffffffbf] hover:text-[#ffc9b0] 
+		transition-all 
+		hover:opacity-100 
+		cursor-pointer
+}
+
+.social-icons {
+	transition: 0.3s ease;
+	@apply 
+		w-[46px] h-[46px] 
+		text-white 
+		flex justify-center items-center 
+		rounded-full 
+		p-2 
+		hover:bg-[#e74c3c] 
+		hover:scale-125 
+		cursor-pointer
+}
+
+/* <------------------ FOOTER ------------------> */
+
+.footer {
+	@apply
+		flex
+		justify-center
+		text-black
+		h-[120px]
+		mt-14
+		bg-slate-300
+}
+
+/* <------------------ SECTIONS & COMPONENTS GLOBAL ------------------> */
+
+.section {
+	@apply
+		flex 
+		flex-col 
+		p-8 
+		pb-0
+		/* md:mt-[150px] */
+		mx-auto 
+		box-content 
+		relative 
+		overflow-hidden 
+		max-w-6xl
+}
+
+.bg-img-projects {
+	background-image: url('./assets/Images/projects.jpeg');
+}
+
+.section-flex {
+	@apply 
+		flex
+		lg:flex-row md:flex-col
+		justify-center
+		m-auto
+		lg:px-12 lg:pt-8 lg:pb-0
+		md:px-4 md:pt-4 md:pb-0
+		max-w-5xl
+		relative
+		overflow-hidden
+		box-content
+}
+
+.section-grid {
+  grid-template-columns: 1fr 1fr;
+	@apply
+		sm:grid
+		flex
+		max-w-7xl
+		m-auto my-0
+		box-content
+		relative
+		overflow-hidden
+		lg:px-12 lg:pt-8 lg:pb-0
+		md:px-4 md:pt-4 md:pb-0
+		px-8 py-12
+}
+
+.section-title {
+	font-family: var(--font-title);
+	background: linear-gradient(
+		140deg,
+		#e0e0c2 8.77%,
+		rgba(245, 214, 79, 0.856) 60.15%
+	);
+	@apply 
+		text-3xl md:text-5xl sm:text-4xl
+		mb-6 
+		max-w-full 
+		w-max 
+		bg-clip-text 
+		text-transparent 
+		font-bold
+}
+
+.section-text {
+	@apply
+		max-w-3xl
+		text-base md:text-2xl sm:text-xl
+		font-light
+		pb-14
+		text-[#f1f1f1]
+}
+
+.btn-back {
+	background: linear-gradient(270deg, #13ADC7 0%, #945DD6 100%);
+	transition: 0.5s ease;
+	@apply
+		relative
+		rounded-[50px]
+		text-[#f1f1f1]
+		text-xl
+		font-semibold
+		flex
+		justify-center
+		items-center
+		cursor-pointer
+	}
+
+	.btn-front {
+	background: linear-gradient(270deg, #ff622e 0%, #B133FF 100%);
+	transition: 0.4s ease;
+	@apply
+		absolute
+		top-0
+		left-0
+		w-full
+		h-full
+		border-none
+		rounded-[50px]
+		text-[#f1f1f1]
+		flex
+		justify-center
+		items-center
+		text-xl
+		font-semibold
+		opacity-100 hover:opacity-0
+		focus:outline-none
+}
+
+
+/* <------------------ TECHNOS ------------------> */
+
+.tech-list {
+	@apply
+		list-none 
+		flex flex-col
+		sm:grid 
+		sm:justify-center
+		grid-cols-3 
+		gap-10 
+		my-12
+}
+.tech-list-item {
+	@apply
+		max-w-xs 
+		flex 
+		sm:flex-col
+		p-4
+		flex-wrap 
+		text-gray-200
+}
+.tech-icons-container {
+	@apply 
+		flex
+		flex-[0.2]
+		flex-col sm:flex-row
+		gap-2
+		mr-3
+		px-6
+		pt-3
+		sm:pb-4
+		items-center sm:px-0
+}
+.tech-text-container {
+	@apply
+		flex 
+		flex-col
+		flex-1
+}
+.tech-text-title {
+	@apply
+		font-bold 
+		text-3xl 
+		mb-2
+}
+.tech-text-p {
+	@apply
+		text-lg 
+		text-[#f1f1f1]
 }
