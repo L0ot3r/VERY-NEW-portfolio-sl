@@ -36,7 +36,7 @@ const Projects = ({ projects }) => {
 												style={`btn-back w-[90px] py-1`}
 											/>
 											<BtnMain 
-												title='Aperçu'
+												title='Visiter'
 												onClick={() => window.open(
 													project.viewurl,
 													'_blank',
