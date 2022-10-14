@@ -111,15 +111,7 @@ a {
 
 /* <------------------ FOOTER ------------------> */
 
-.footer {
-	@apply
-		flex
-		justify-center
-		text-black
-		h-[120px]
-		mt-14
-		bg-slate-300
-}
+
 
 /* <------------------ SECTIONS & COMPONENTS GLOBAL ------------------> */
 
