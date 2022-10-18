@@ -2,12 +2,13 @@ import React from 'react';
 
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 import { DiCssdeck } from 'react-icons/di';
+import BtnMailTo from './BtnMailTo';
 
 const Navbar = () => {
 	return (
 		<div className='nav-container'>
 			<div className='nav-brand'>
-				<a href='/' className='text-[#f1f1f1] mb-1 flex items-center'>
+				<a href='#top' className='text-[#f1f1f1] mb-1 flex items-center'>
 					<DiCssdeck size='2.5rem' />{' '}
 					<span className='text-3xl ml-1'>Portfolio</span>
 				</a>
@@ -27,6 +28,9 @@ const Navbar = () => {
 					<a href='#about' className='nav-link'>
 						À Propos
 					</a>
+				</li>
+				<li>
+					<BtnMailTo title='Contact' />
 				</li>
 			</div>
 			<div className='social-links'>
