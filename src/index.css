@@ -79,9 +79,10 @@ a {
 
 .social-links {
 	@apply
-		sm:col-start-5 sm:col-end-6 
+		sm:col-end-6 
 		col-end-5
 		flex
+		pr-5 md:pr-0
 		sm:justify-around
 		items-center
 }
@@ -89,7 +90,7 @@ a {
 .nav-link {
 	transition: 0.4s ease;
 	@apply 
-		text-xl 
+		text-lg sm:text-xl 
 		text-[#ffffffbf] hover:text-[#ffc9b0] 
 		transition-all 
 		hover:opacity-100 
