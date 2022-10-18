@@ -21,7 +21,7 @@ const App = () => {
         <div className='section-flex'>
           <Hero />
         </div>
-        <BgAnim />
+        <BgAnim className='hidden md:static' />
       </div>
       <Projects projects={projects} />
       <Technologies />

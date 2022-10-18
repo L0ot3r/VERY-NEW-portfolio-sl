@@ -7,10 +7,10 @@ const Hero = () => {
 		<div className='section-flex'>
 			<div className='section-left'>
 				<h2 className='section-title'>
-					Sébastien Léoville <br />
-					Vous accueil sur son Portfolio
-					{/* Bienvenue sur <br />
-					Mon Portfolio Personnel */}
+					{/* Sébastien Léoville <br />
+					Vous accueil sur son Portfolio */}
+					Bienvenue sur <br />
+					Mon Portfolio Personnel
 				</h2>
 				<p className='section-text'>
 					Mon objectif principal est d&apos;associer ma passion pour les
@@ -19,7 +19,7 @@ const Hero = () => {
 					le service dont vous avez besoin pour développer de votre activité.
 				</p>
 
-				<div className='flex flex-col sm:flex-row gap-2 justify-between'>
+				<div className='flex flex-col sm:flex-row w-full gap-2 p-2 justify-between'>
 					<BtnMain
 						title='En savoir plus'
 						onClick={() =>

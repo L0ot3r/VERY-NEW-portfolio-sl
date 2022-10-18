@@ -40,7 +40,7 @@ const Navbar = () => {
 					target='_blank'
 					rel='noopener noreferrer'
 				>
-					<AiFillGithub size='2rem' />
+					<AiFillGithub className='text-xl sm:text-[2rem]' />
 				</a>
 				<a
 					className='social-icons mr-2'
@@ -48,7 +48,7 @@ const Navbar = () => {
 					target='_blank'
 					rel='noopener noreferrer'
 				>
-					<AiFillLinkedin size='2rem' />
+					<AiFillLinkedin className='text-xl sm:text-[2rem]' />
 				</a>
 				<a
 					className='social-icons'
@@ -56,7 +56,7 @@ const Navbar = () => {
 					target='_blank'
 					rel='noopener noreferrer'
 				>
-					<AiFillInstagram size='2rem' />
+					<AiFillInstagram className='text-xl sm:text-[2rem]' />
 				</a>
 			</div>
 		</div>
