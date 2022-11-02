@@ -7,7 +7,7 @@ const App = () => {
   
   useEffect(() => {
     const fetchProjects = async () => {
-      const query = `*[_type == 'project']`;
+      const query = `*[_type == 'project' | order(_createdAt desc)]`;
       const projects = await client.fetch(query)
       setProjects(projects)
     }
